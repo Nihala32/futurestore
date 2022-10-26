@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+{%block body_block%}
+<div class="container-fluid mt-5">
+    <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+        {%for blog in blogs%}
+
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <!-- Post preview-->
+
+                                <div class="col-md-10 col-md-5 col-xl-7">
+
+                 <div class="post-preview">
+
+                            <h2 class="post-title">{{blog.title}}</h2>
+                            <h3 class="post-subtitle">{{blog.content}}</h3>
+
+                        <p class="post-meta">
+                            Posted by
+                            <a href="#!">{{request.user}}</a>
+
+                        </p>
+                    </div>
+
+
+                {%endfor%}
+
+
+    </div>
+
+{%endblock%}

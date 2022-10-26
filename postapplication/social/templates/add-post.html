@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{%block body_block%}
+
+<div class="container ">
+    <div class="row mt-5">
+        <div class="col-4"></div>
+        <div class="col-4">
+
+            <form action="" class="border mt-5" method="post">
+
+               <div class="w3-col  m12">
+          <div class="w3-card w3-round w3-white m12">
+            {%csrf_token%}
+                {{form.as_p}}
+                <a href="{%url 'add-post'%}"   class="w3-button w3-theme-d2 w3-margin-bottom">  Post</a>
+            </div>
+          </div>
+
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+{%endblock%}
